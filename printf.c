@@ -13,11 +13,11 @@ int _printf(const char *format, ...)
 	va_list arg_list;
 	flags_t flags = {0, 0, 0};
 
-register int count = 0;
+	register int count = 0;
 
 	va_start(arg_list, format);
 	/*check % format specifier*/
-	if (format == 0)
+	if (format == 0 || (format[0] == '%' && !format[1]))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
