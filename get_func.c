@@ -48,7 +48,7 @@ int (*get_print(char s))(va_list, flags_t *)
 int get_flag(char s, flags_t *f)
 {
 	int i = 0;
-	switch (s)
+	switch(s)
 	{
 		case '+':
 			f->plus = 1;
